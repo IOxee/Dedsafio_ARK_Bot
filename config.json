@@ -1,0 +1,153 @@
+{
+	"allowed_ids": [
+		"236731793892573185",
+		"217049202302124032",
+		"301775090687934465",
+		"215037505106345984",
+		"202491009081278465",
+		"297880481708507148",
+		"364841688763596802",
+		"187025575347486720",
+		"273554334757945374",
+		"273555679900598273"
+	],
+	"eventos_config": {
+		"adn": {
+			"delay": 10,
+			"dontrepeat": "False",
+			"Concat": "True",
+			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: ERROR DE ADN DURANTE ",
+			"comandos": [
+				"scriptcommand propagaerroradn"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"dinoespitososERROR": {
+			"delay": 10,
+			"dontrepeat": "False",
+			"Concat": "True",
+			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: LOS DINOS TAMEADOS PUEDE QUE SE CONFUNDAN MENTALMENTE DURANTE ",
+			"comandos": [
+				"scriptcommand dinoespitosos"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"dinosdormidos": {
+			"delay": 15,
+			"dontrepeat": "True",
+			"Concat": "False",
+			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: LOS DINOS TAMEADOS PUEDEN SUFRIR SOMNOLENCIA GALOPANTE AGUDA]",
+			"comandos": [
+				"scriptcommand dinosdormidos"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"florrara": {
+			"delay": 10,
+			"dontrepeat": "False",
+			"Concat": "True",
+			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: DETECTADO ALTO NIVEL DE POLEN DE FLOR RARA EN EL AIRE. EXTREMEN LA PRECAUCION, DURANTE  ",
+			"comandos": [
+				"scriptcommand propagaflorrara"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"setas": {
+			"delay": 10,
+			"dontrepeat": "False",
+			"Concat": "True",
+			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: HAN APARECIDO ESPORAS DE SETAS MALAS EN EL SISTEMA DE OXIGENO, DISFRUTALO DURANTE LOS PROXIMOS ",
+			"comandos": [
+				"scriptcommand propagasetas"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"diarrea": {
+			"delay": 10,
+			"dontrepeat": "False",
+			"Concat": "True",
+			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: SE HA DETECTADO UNA BACTERIA EN EL AMBIENTE (CAGARRUS MAXIMUS) DURANTE ",
+			"comandos": [
+				"scriptcommand propagadiarrea"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"tufon": {
+			"delay": 10,
+			"dontrepeat": "False",
+			"Concat": "True",
+			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: ALERTA DE TUFON DURANTE ",
+			"comandos": [
+				"scriptcommand propagaventosidad"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"dormilon": {
+			"delay": 15,
+			"dontrepeat": "False",
+			"Concat": "True",
+			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: PROBLEMAS DE SOMNOLENCIA DURANTE ",
+			"comandos": [
+				"scriptcommand propagadormilon"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"playerspeed": {
+			"delay": 10,
+			"dontrepeat": "False",
+			"Concat": "False",
+			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: TE NOTAS CANSADO, MUY CANSADO DURANTE ",
+			"comandos": [
+				"scriptcommand propagaspeedplayer"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"desnudo": {
+			"delay": 10,
+			"dontrepeat": "False",
+			"Concat": "True",
+			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: NIVEL MUY ALTO DE HORMONAS SENSUALES, TODOS LOS HUMANOS SE QUIEREN APAREAR LA FALLA ESTARA AREGLADA EN  ",
+			"comandos": [
+				"scriptcommand propagadesnudo"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"orgasmo": {
+			"delay": 10,
+			"Concat": "True",
+			"dontrepeat": "False",
+			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: FUGA DE FEROMONAS ALTERADAS DURANTE ",
+			"comandos": [
+				"scriptcommand propagaorgasmo"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		}
+	},
+	"rcon": {
+		"host": "dedsafio.game-server.cc",
+		"port": 30144,
+		"rconprueba": 37000
+	},
+	"messages": {
+		"donthavepermisions": "❌ No tienes permisos para usar esto! ❌",
+		"donthavepermissions_roulette_type": "❌ No tienes permisos para usar este tipo de ruleta! ❌",
+		"scriptCommand": "scriptcommand",
+		"ruletaCommand": "ruletadedsafio",
+		"durante": "DURANTE",
+		"duranteproximos": "DURANTE LOS PRÓXIMOS",
+		"minuts": "MINUTO(S)",
+		"dura_maxima": "Duración máxima de 30 minutos permitida.",
+		"ruleta_activa": "Ya hay una ruleta activa en este momento"
+	}
+}

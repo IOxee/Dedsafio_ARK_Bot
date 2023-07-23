@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ark-rcon
+Version: 0.0.4
+Summary: A basic RCON client for ARK servers
+Home-page: https://github.com/scottjones4k/ark_rcon
+Author: Scott Jones
+Author-email: scott.jones4k@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+A basic RCON client for ARK servers
+
+

@@ -1,0 +1,37 @@
+Metadata-Version: 2.0
+Name: aiorcon
+Version: 0.6.8
+Summary: An asynchronous interface for the Source RCON Protocol.
+Home-page: https://github.com/Sebass13/aiorcon
+Author: Sebastian
+Author-email: sebikele@gmail.com
+License: GPL-3.0
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Games/Entertainment
+
+aiorcon
+============
+
+.. image:: https://img.shields.io/pypi/v/aiorcon.svg
+    :target: https://pypi.org/project/aiorcon/
+
+.. image:: https://img.shields.io/pypi/l/aiorcon.svg
+    :target: https://pypi.python.org/pypi/aiorcon
+
+.. image:: https://img.shields.io/pypi/pyversions/aiorcon.svg
+    :target: https://pypi.python.org/pypi/aiorcon
+
+An asynchronous interface for the Source RCON Protocol.
+
+
