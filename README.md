@@ -1,4 +1,5 @@
 <center><h1>DISCORD BOT OFICIAL DEL DEDSAFIO ARK</h1></center>
+
 ![DedsafioLogo_R3_3](https://github.com/IOxee/Ded_Bot_ARK/assets/48241519/4fa426a1-809b-454c-855f-ba3218129643)
 
 ** Disclaimer **
