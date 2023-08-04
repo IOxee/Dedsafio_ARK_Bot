@@ -1,22 +1,18 @@
 {
+	"bot": {
+		"status": "VIENDO DEDSAFIO ARK"
+	},
 	"allowed_ids": [
-		"236731793892573185",
-		"217049202302124032",
-		"301775090687934465",
-		"215037505106345984",
-		"202491009081278465",
-		"297880481708507148",
-		"364841688763596802",
-		"187025575347486720",
-		"273554334757945374",
-		"273555679900598273"
+		"PON AQUI LA ID DE LA GENTE QUE QUIERES QUE TENGA PERMISO PARA USAR LOS MANDOS DEL BOT"
 	],
+	"serverchat": "True",
 	"eventos_config": {
 		"adn": {
 			"delay": 10,
 			"dontrepeat": "False",
 			"Concat": "True",
-			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: ERROR DE ADN DURANTE ",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: ERROR DE ADN DURANTE ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
 			"comandos": [
 				"scriptcommand propagaerroradn"
 			],
@@ -27,7 +23,8 @@
 			"delay": 10,
 			"dontrepeat": "False",
 			"Concat": "True",
-			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: LOS DINOS TAMEADOS PUEDE QUE SE CONFUNDAN MENTALMENTE DURANTE ",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: LOS DINOS TAMEADOS PUEDE QUE SE CONFUNDAN MENTALMENTE DURANTE ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
 			"comandos": [
 				"scriptcommand dinoespitosos"
 			],
@@ -38,7 +35,8 @@
 			"delay": 15,
 			"dontrepeat": "True",
 			"Concat": "False",
-			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: LOS DINOS TAMEADOS PUEDEN SUFRIR SOMNOLENCIA GALOPANTE AGUDA]",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: LOS DINOS TAMEADOS PUEDEN SUFRIR SOMNOLENCIA GALOPANTE AGUDA",
+			"ruletaComando": "scriptcommand ruletadedsafio [",
 			"comandos": [
 				"scriptcommand dinosdormidos"
 			],
@@ -49,7 +47,8 @@
 			"delay": 10,
 			"dontrepeat": "False",
 			"Concat": "True",
-			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: DETECTADO ALTO NIVEL DE POLEN DE FLOR RARA EN EL AIRE. EXTREMEN LA PRECAUCION, DURANTE  ",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: DETECTADO ALTO NIVEL DE POLEN DE FLOR RARA EN EL AIRE. EXTREMEN LA PRECAUCION, DURANTE ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
 			"comandos": [
 				"scriptcommand propagaflorrara"
 			],
@@ -60,7 +59,8 @@
 			"delay": 10,
 			"dontrepeat": "False",
 			"Concat": "True",
-			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: HAN APARECIDO ESPORAS DE SETAS MALAS EN EL SISTEMA DE OXIGENO, DISFRUTALO DURANTE LOS PROXIMOS ",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: HAN APARECIDO ESPORAS DE SETAS MALAS EN EL SISTEMA DE OXIGENO, DISFRUTALO DURANTE LOS PROXIMOS ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
 			"comandos": [
 				"scriptcommand propagasetas"
 			],
@@ -71,6 +71,7 @@
 			"delay": 10,
 			"dontrepeat": "False",
 			"Concat": "True",
+			"mensaje": "",
 			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: SE HA DETECTADO UNA BACTERIA EN EL AMBIENTE (CAGARRUS MAXIMUS) DURANTE ",
 			"comandos": [
 				"scriptcommand propagadiarrea"
@@ -82,7 +83,8 @@
 			"delay": 10,
 			"dontrepeat": "False",
 			"Concat": "True",
-			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: ALERTA DE TUFON DURANTE ",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: ALERTA DE TUFON DURANTE ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
 			"comandos": [
 				"scriptcommand propagaventosidad"
 			],
@@ -93,7 +95,8 @@
 			"delay": 15,
 			"dontrepeat": "False",
 			"Concat": "True",
-			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: PROBLEMAS DE SOMNOLENCIA DURANTE ",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: PROBLEMAS DE SOMNOLENCIA DURANTE ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
 			"comandos": [
 				"scriptcommand propagadormilon"
 			],
@@ -104,7 +107,8 @@
 			"delay": 10,
 			"dontrepeat": "False",
 			"Concat": "False",
-			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: TE NOTAS CANSADO, MUY CANSADO DURANTE ",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: TE NOTAS CANSADO, MUY CANSADO DURANTE ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
 			"comandos": [
 				"scriptcommand propagaspeedplayer"
 			],
@@ -115,7 +119,8 @@
 			"delay": 10,
 			"dontrepeat": "False",
 			"Concat": "True",
-			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: NIVEL MUY ALTO DE HORMONAS SENSUALES, TODOS LOS HUMANOS SE QUIEREN APAREAR LA FALLA ESTARA AREGLADA EN  ",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: NIVEL MUY ALTO DE HORMONAS SENSUALES, TODOS LOS HUMANOS SE QUIEREN APAREAR LA FALLA ESTARA ARREGLADA EN ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
 			"comandos": [
 				"scriptcommand propagadesnudo"
 			],
@@ -126,18 +131,91 @@
 			"delay": 10,
 			"Concat": "True",
 			"dontrepeat": "False",
-			"ruletaComando": "scriptcommand ruletadedsafio [MALFUNCIONAMIENTO DEL ARKA: FUGA DE FEROMONAS ALTERADAS DURANTE ",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: FUGA DE FEROMONAS ALTERADAS DURANTE ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
 			"comandos": [
 				"scriptcommand propagaorgasmo"
 			],
 			"colorRuleta": 2,
 			"has_permission": "allowed"
+		},
+		"bebe": {
+			"delay": 10,
+			"Concat": "True",
+			"dontrepeat": "False",
+			"mensaje": "MALFUNCIONAMIENTO DE LA ARKA: DURANTE 15 MINUTOS TODOS LOS HUMANOS VUELVEN A SU ETAPA INFANTIL DURANTE ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
+			"comandos": [
+				"scriptcommand propagabebe"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"mosquito": {
+			"delay": 10,
+			"Concat": "True",
+			"dontrepeat": "False",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: LAS MOSCAS VAN A LA MIELDA DURANTE ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
+			"comandos": [
+				"scriptcommand propagamosquito"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"congelacion": {
+			"delay": 10,
+			"Concat": "True",
+			"dontrepeat": "False",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: LAS TEMPERATURAS HAN BAJADO DRASTICAMENTE DURANTE ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
+			"comandos": [
+				"scriptcommand propagacongelado"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"casimuerto": {
+			"delay": 10,
+			"Concat": "False",
+			"dontrepeat": "True",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: LO SENTIMOS SUPERVIVIENTE, NECESITAMOS TU ENERGÍA PARA EL ARK",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
+			"comandos": [
+				"scriptcommand propagacasimuerto"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"gagases": {
+			"delay": 10,
+			"Concat": "True",
+			"dontrepeat": "False",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: FUGA DE GASES PELIGROSOS DURANTE ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
+			"comandos": [
+				"scriptcommand propagagases"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
+		},
+		"radio": {
+			"delay": 10,
+			"Concat": "True",
+			"dontrepeat": "False",
+			"mensaje": "MALFUNCIONAMIENTO DEL ARKA: VUESTROS TRASEROS EMITEN NIVELES ALTOS DE RADIACIÓN DURANTE ",
+			"ruletaComando": "scriptcommand ruletadedsafio [ ",
+			"comandos": [
+				"scriptcommand propagaradio"
+			],
+			"colorRuleta": 2,
+			"has_permission": "allowed"
 		}
+		
 	},
 	"rcon": {
-		"host": "dedsafio.game-server.cc",
-		"port": 30144,
-		"rconprueba": 37000
+		"host": "AQUI TU IP DEL SERVIDOR DE ARK",
+		"port": 30144
 	},
 	"messages": {
 		"donthavepermisions": "❌ No tienes permisos para usar esto! ❌",

@@ -7,7 +7,6 @@ app = Flask('')
 
 @app.route('/')
 def main():
-    print(datetime.datetime.now().strftime("%X"))
     return "server online!"
 
 
@@ -18,4 +17,3 @@ def run():
 def keep_alive():
     server = Thread(target=run)
     server.start()
-    print(datetime.datetime.now().strftime("%X"))
