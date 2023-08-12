@@ -1,6 +1,6 @@
-import time, asyncio, random, string, json, os, discord, discord.ext
+import asyncio, json, os, discord, discord.ext, pyttsx3
 from keep_alive import keep_alive
-from discord.ext import commands
+from discord.ext import commands, tasks
 from discord_slash import SlashCommand
 from discord_slash import SlashContext
 from discord_slash.utils import manage_commands
@@ -13,7 +13,7 @@ with open('config.json') as f:
 
 #Define our bot
 client = discord.Client()
-client = commands.Bot(command_prefix="DED!")
+client = commands.Bot(command_prefix=config["bot"]["prefix"])
 slash = SlashCommand(client, sync_commands=True)
 intents = discord.Intents.default()
 intents.guilds = True
@@ -40,8 +40,8 @@ async def on_ready():
     await client.change_presence(
         status=discord.Status.online,
         activity=discord.Game(
-            name=config["bot"]["status"],
-            status=discord.Status.do_not_disturb
+            name=config["bot"]["status"]["text"],
+            status=config["bot"]["status"]["type"]
         )
     )
     print("Bot online")
@@ -58,10 +58,10 @@ async def on_ready():
             choices=[
                 manage_commands.create_choice(name="Mutacion de ADN",
                                               value="ADN"),
-                #                   manage_commands.create_choice(
-                #  name="Dino Indomables",
-                #                       value="dinoespitosos"
-                # ),
+                manage_commands.create_choice(
+                    name="Dino Indomables",
+                    value="dinoespitosos"
+                ),
                 manage_commands.create_choice(name="Dinos Dormilones",
                                               value="dinosdormidos"),
                 manage_commands.create_choice(
@@ -249,6 +249,7 @@ async def _help(ctx: SlashContext, tipo: str, duracion: str, repeticion: str):
     else:
         await ctx.send(lang.get("donthavepermisions"))
 
+
 @slash.slash(
     name="clear",
     description="Limpia el discord de los deschos humanos llamados mensajes",
@@ -269,6 +270,7 @@ async def clear(ctx, amount: str):
         await ctx.channel.purge(limit=int(amount))
     else:
         await ctx.send(lang.get("donthavepermisions"))
+
 
 @slash.slash(
     name="serverchat",
@@ -300,12 +302,115 @@ async def serverchat(ctx: SlashContext, text: str):
     else:
         await ctx.send(lang.get("donthavepermisions"))
 
+
+subapartado = []
+user_has_permision = False
+
+@slash.slash(
+    name="broadcast",
+    description=
+    "Pues hace lo que su nombre indica mandar un broadcast en el server",
+    options=[
+        create_option(
+            name="texto",
+            description=
+            "Repuesta que esto le afecta el limite de caracteres de discord y los permitidos por el propio juego!",
+            option_type=3,
+            required=True)
+    ])
+async def broadcast(ctx, text: str):
+    global subapartado
+    print(ctx.author.name)
+    for subapartado in config["allowed_ids2"].values():
+        if str(ctx.author.id) == subapartado["id"]:
+            user_has_permision = True
+            print("Name:", subapartado["name"])
+            print("ID:", subapartado["id"])
+            print(text)
+        else:
+            await ctx.send(lang.get("donthavepermisions"))
+
+
+@slash.slash(name="joinvoice",
+             description="this is a test for voice channel join",
+             options=[
+                 create_option(name="channel",
+                               description="please sleect channel",
+                               option_type=7,
+                               required=True)
+             ])
+async def joinvoice(ctx, channel):
+    if str(ctx.author.id) in config["allowed_ids"]:
+        await channel.connect()
+    else:
+        await ctx.send(lang.get("donthavepermisions"))
+
+
 @slash.slash(name="deteneruleta",
              description="Detener la ultima ruleta ejecutada!")
 async def deteneruleta(ctx: SlashContext):
     global ruleta_activa
     ruleta_activa = False
     await ctx.send("La ultima ruleta se ha detenido con exito!")
+
+
+def text_to_speech(message):
+    engine = pyttsx3.init()
+    engine.save_to_file(message, 'tts.mp3')
+    engine.runAndWait()
+
+
+@slash.slash(name="tts",
+             description="Reproduce un mensaje en un canal de voz.",
+             options=[{
+                 "name": "canal_de_voz",
+                 "description":
+                 "Canal de voz en el que se reproducirá el mensaje.",
+                 "type": 7,
+                 "required": True
+             }, {
+                 "name": "mensaje",
+                 "description": "Mensaje a reproducir por voz.",
+                 "type": 3,
+                 "required": True
+             }])
+async def tts(ctx, canal_de_voz: discord.VoiceChannel, mensaje: str):
+    global bot_in_vc
+    if not bot_in_vc:
+        try:
+            vc = await canal_de_voz.connect()
+            print(vc)
+        except discord.ClientException:
+            await ctx.send(
+                "Ya estoy en un canal de voz. Utiliza el comando 'leave' para salir antes de unirme a otro."
+            )
+
+        bot_in_vc = True
+        print(
+            f"Me he unido al canal de voz {canal_de_voz.name}. Se ha establecido la variable a {bot_in_vc}"
+        )
+        await ctx.send(f"Me he unido al canal de voz {canal_de_voz.name}.")
+    else:
+        await ctx.send(
+            "Ya estoy en un canal de voz. Utiliza el comando 'leave' para salir antes de unirme a otro."
+        )
+    #else:
+    #await ctx.send(
+    #"¡Debes estar en un canal de voz para usar este comando!")
+
+
+@slash.slash(name="leave", description="El bot sale del canal de voz actual.")
+async def leave(ctx):
+    global bot_in_vc
+    print(bot_in_vc)
+    if bot_in_vc:
+        voice_client = ctx.guild.voice_client
+        await voice_client.disconnect()
+        bot_in_vc = False
+        await ctx.send("Me he desconectado del canal de voz.")
+    else:
+        await ctx.send("No estoy en un canal de voz.")
+
 
 keep_alive()
 client.run(os.getenv("TOKEN"))

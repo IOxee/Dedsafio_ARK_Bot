@@ -1,11 +1,30 @@
 {
 	"bot": {
-		"status": "VIENDO DEDSAFIO ARK"
+		"prefix": "DED!",
+		"status":{
+			"text": "VIENDO DEDSAFIO ARK",
+			"type": "WATCHING"
+		}
 	},
 	"allowed_ids": [
 		"PON AQUI LA ID DE LA GENTE QUE QUIERES QUE TENGA PERMISO PARA USAR LOS MANDOS DEL BOT"
 	],
 	"serverchat": "True",
+	"rcon": {
+		"host": "AQUI TU IP DEL SERVIDOR DE ARK",
+		"port": 30144
+	},
+	"messages": {
+		"donthavepermisions": "❌ No tienes permisos para usar esto! ❌",
+		"donthavepermissions_roulette_type": "❌ No tienes permisos para usar este tipo de ruleta! ❌",
+		"scriptCommand": "scriptcommand",
+		"ruletaCommand": "ruletadedsafio",
+		"durante": "DURANTE",
+		"duranteproximos": "DURANTE LOS PRÓXIMOS",
+		"minuts": "MINUTO(S)",
+		"dura_maxima": "Duración máxima de 30 minutos permitida.",
+		"ruleta_activa": "Ya hay una ruleta activa en este momento"
+	},
 	"eventos_config": {
 		"adn": {
 			"delay": 10,
@@ -19,7 +38,7 @@
 			"colorRuleta": 2,
 			"has_permission": "allowed"
 		},
-		"dinoespitososERROR": {
+		"dinoespitosos": {
 			"delay": 10,
 			"dontrepeat": "False",
 			"Concat": "True",
@@ -212,20 +231,5 @@
 			"has_permission": "allowed"
 		}
 		
-	},
-	"rcon": {
-		"host": "AQUI TU IP DEL SERVIDOR DE ARK",
-		"port": 30144
-	},
-	"messages": {
-		"donthavepermisions": "❌ No tienes permisos para usar esto! ❌",
-		"donthavepermissions_roulette_type": "❌ No tienes permisos para usar este tipo de ruleta! ❌",
-		"scriptCommand": "scriptcommand",
-		"ruletaCommand": "ruletadedsafio",
-		"durante": "DURANTE",
-		"duranteproximos": "DURANTE LOS PRÓXIMOS",
-		"minuts": "MINUTO(S)",
-		"dura_maxima": "Duración máxima de 30 minutos permitida.",
-		"ruleta_activa": "Ya hay una ruleta activa en este momento"
 	}
 }

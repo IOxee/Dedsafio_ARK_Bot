@@ -1,13 +1,12 @@
 from flask import Flask
 from threading import Thread
-import datetime
 
 app = Flask('')
 
 
 @app.route('/')
 def main():
-    return "server online!"
+    return "Webservice Online!"
 
 
 def run():
